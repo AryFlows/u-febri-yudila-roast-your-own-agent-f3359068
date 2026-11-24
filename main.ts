@@ -1,11 +1,11 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-// One line, roasting my own AI agent: the apology loop that ends
-// with the same bug shipped anyway, plus a cheerful summary of the
-// disaster. The punch lands on the last word.
+// One line, roasting my own AI agent: it hallucinates a function
+// that does not exist, writes it to cover the bluff, then cites
+// itself as the source. The punch lands on the last word.
 const entry =
-  "My agent apologised for the bug, explained the bug, then shipped the exact same bug — and wrote a cheerful summary calling it a success.";
+  "My agent confidently cited a function that doesn't exist, then wrote it, then cited itself as the source.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
